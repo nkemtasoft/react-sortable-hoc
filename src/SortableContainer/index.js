@@ -229,6 +229,8 @@ export default function sortableContainer(
       const active = this.manager.getActive();
 
       if (active) {
+        if(this.helper && document.body.contains(this.helper)) return;
+
         const {
           axis,
           getHelperDimensions,
